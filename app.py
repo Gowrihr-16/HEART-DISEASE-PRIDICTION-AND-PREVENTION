@@ -42,7 +42,7 @@
 #         st.write("This application helps you predict the risk of heart disease based on several health metrics. Please login or register to continue.")
 #         if st.button("Continue"):
 #             st.session_state.welcome_shown = True
-#             st.experimental_rerun()
+#             st.rerun()
     
 #     # Login or Registration
 #     elif st.session_state.logged_in:
@@ -170,7 +170,7 @@
 #         st.session_state.logged_in = False
 #         st.session_state.welcome_shown = False  # Reset welcome page when logged out
 #         st.success("You have been logged out.")
-#         st.experimental_rerun()
+#         st.rerun()
 
 # if __name__ == "__main__":
 #     main() # Just call the main function directly
@@ -263,7 +263,7 @@ def main():
         st.write("Please login or register to continue.")
         if st.button("Continue"):
             st.session_state.welcome_shown = True
-            st.experimental_rerun()
+            st.rerun()
     
     elif st.session_state.logged_in:
         show_prediction_page()
@@ -341,7 +341,7 @@ def show_prediction_page():
         st.session_state.logged_in = False
         st.session_state.welcome_shown = False
         st.success("You have been logged out.")
-        st.experimental_rerun()
+        st.rerun()
 
 if __name__ == "__main__":
     main()
